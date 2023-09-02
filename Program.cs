@@ -7,7 +7,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 var app = builder.Build();
 
 app.MapGet("/todoitems",  (TodoDb db) =>
-    new List<Todo>(){new Todo(){ Id =1, Name = "Jéssica" }});
+    new List<Todo>(){new Todo(){ Id =1, Name = "Gilberto" }});
 
 app.MapGet("/todoitems/complete", async (TodoDb db) =>
     await db.Todos.Where(t => t.IsComplete).ToListAsync());
